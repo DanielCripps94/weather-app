@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import store from './store'
-import Locations from './components/Locations'
+import Locations from './components/Locations/Locations'
 
 const App = () => {
   return (
