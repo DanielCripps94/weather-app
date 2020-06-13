@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAction } from '../../actions/locations'
-import { Location } from '../../Location'
+import { Location } from '../Location'
 
 const Locations = () => {
     const dispatch = useDispatch();

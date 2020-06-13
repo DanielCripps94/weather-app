@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, Dropdown, Row, Col  } from 'react-bootstrap'
+import { Dropdown, Row, Col  } from 'react-bootstrap'
+import { capitalizeFirstLetter } from '../helpers'
 
 export const Location = ({ weatherData }) => {
    
@@ -10,7 +11,7 @@ export const Location = ({ weatherData }) => {
                 <Row className='show-grid'>
                    <Dropdown>
                         <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        {weatherData.name}
+                            {weatherData.name}
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
                             <Dropdown.Item href="#/action-1">Darlington</Dropdown.Item>
@@ -19,10 +20,10 @@ export const Location = ({ weatherData }) => {
                             <Dropdown.Item href="#/action-3">London</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
-                        <img src='http://openweathermap.org/img/w/10d.png'/>
+                        <img src={"http://openweathermap.org/img/w/"+ weatherData.weather[0].icon + ".png"}/>
                         <div>
                             <Col>{Math.round(weatherData.main.temp - 273.5)}°c</Col>
-                            <Col>{weatherData.weather[0].description}</Col>
+                            <Col>{capitalizeFirstLetter(weatherData.weather[0].description)}</Col>
                         </div>
                     </Row>
                 </div>
