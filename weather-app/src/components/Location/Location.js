@@ -1,10 +1,26 @@
 import React from 'react'
 import './Location.css'
+import { Card } from 'react-bootstrap'
 
-export const Location = () => {
+export const Location = ({ weatherData }) => {
+   
+    const renderLocation = () => {
+        if(weatherData.sys, weatherData.main) {
+            return <p className='location--wrapper'>
+                    {weatherData.name}
+                    {weatherData.sys.country}
+                    {weatherData.main.temp}
+                </p>
+        }
+    }
+   
     return (
         <div>
-            <p className='location--card'>One Loaction</p>
+            {renderLocation()}
         </div>
     )
 }
+
+// city name 
+// weather icon
+// description

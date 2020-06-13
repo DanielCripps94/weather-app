@@ -5,21 +5,19 @@ import { Location } from '../Location/Location'
 
 const Locations = () => {
     const dispatch = useDispatch();
-    const { data } = useSelector(state => state.locations)
-
+    const { data }  = useSelector(state => state.locations)
+    
     useEffect(() => {
         dispatch(fetchAction());
     }, [dispatch])
 
     console.log(data)
+    
 
-    // const renderLocation = () => {
-    //     return data.map(location => (
-    //         <Location location={location} />
-    //     ))
-    // }
-
-    return <div><Location/></div>
+    return <div>
+                <Location weatherData={data}/>
+            </div>
+            
 }
 
 export default Locations
