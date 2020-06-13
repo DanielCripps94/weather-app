@@ -7,4 +7,39 @@
     width: 45rem;
     padding:  1em;
     border-radius: 10px;
+    margin: 0 auto
 }
+
+.location--card {
+    margin: 0 auto
+ }
+ 
+ .location--wrapper {
+    display: flex;
+    justify-items: space-evenly;
+ }
+ 
+ .btn-success {
+    background-color:white ;
+    color: black;
+    width: 20rem;
+    border-color: grey;
+    margin-top: 0.4rem;
+ }
+
+ .btn {
+     text-align: left;
+ }
+
+ .dropdown-toggle::after {
+     margin-left: 14rem;
+ }
+ 
+ .dropdown {
+     margin-left: 2rem
+ }
+
+ .dropdown-menu.show {
+     width: 20rem;
+     margin-top: 30px
+ }
