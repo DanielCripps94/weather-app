@@ -4,6 +4,7 @@ const initialState = {
 };
 
 export default function locations( state = initialState, action) {
+    
     if (action.type === 'FETCH_LOCATIONS_SUCCESS') {
         return {
             ...state,
@@ -15,6 +16,14 @@ export default function locations( state = initialState, action) {
         return {
             ...state,
             error: action.payload
+        }
+    }
+
+    if (action.type === 'FETCH_LOCATIONS_SUCCESS') {
+        
+        return {
+            ...state,
+            data: action.payload
         }
     }
        
