@@ -11,14 +11,10 @@ const Locations = () => {
     useEffect(() => {
         dispatch(fetchAction(city));
     }, [dispatch, city])
-
-    console.log(data)
     
-
     return <div>
                 <Location weatherData={data} setCity={setCity} city={city}/>
             </div>
-            
-}
+    }
 
 export default Locations

@@ -1,3 +1,5 @@
+/* main */
+
 .container {
     margin-top: 15rem;
 }
@@ -19,12 +21,17 @@
     justify-items: space-evenly;
  }
  
+/* button items */
+
  .btn-success {
     background-color:white ;
     color: black;
     width: 20rem;
     border-color: grey;
     margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
  }
 
  .btn {
@@ -32,7 +39,7 @@
  }
 
  .dropdown-toggle::after {
-     margin-left: 14rem;
+     margin-top: 0.6rem;
  }
  
  .dropdown {
@@ -43,3 +50,21 @@
      width: 20rem;
      margin-top: 30px
  }
+
+ /* image styling */
+
+.img--component {
+    margin-left: 6rem;
+}
+
+/* text styling */
+
+.title--component {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.description--container {
+    font-weight: 600;
+}

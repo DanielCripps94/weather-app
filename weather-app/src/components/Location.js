@@ -20,10 +20,10 @@ export const Location = ({ weatherData, setCity, city }) => {
                             <Dropdown.Item onSelect={(key, val) => setCity(val.target.textContent)}>London</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
-                        <img src={"http://openweathermap.org/img/w/"+ weatherData.weather[0].icon + ".png"}/>
+                        <img className='img--component'src={"http://openweathermap.org/img/w/"+ weatherData.weather[0].icon + ".png"}/>
                         <div>
                             <Col>{Math.round(weatherData.main.temp - 273.5)}°c</Col>
-                            <Col>{capitalizeFirstLetter(weatherData.weather[0].description)}</Col>
+                            <Col className='description--container'>{capitalizeFirstLetter(weatherData.weather[0].description)}</Col>
                         </div>
                     </Row>
                 </div>
